@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+		*{padding: 0;margin: 0;}
+		html{
+			/*font-size: 20px;*/
+		}
+		.ads{
+			width: 7.5rem;
+			height: 10rem;
+			background: pink;
+			font-size: 0.66rem;
+			/*50px*/
+		}
+		.as{
+			font-size:20px;
+		}
+		</style>
+	</head>
+	<body>
+    	<div class="ads">
+    		撒打算的圣达菲斯蒂芬斯蒂芬圣达菲烧电焊翻山倒海覅US和覅US地方是否撒打算的圣达菲圣达菲舒服是的
+    	</div>
+    	<div class="as">
+    		撒打算的圣达菲斯蒂芬斯蒂芬圣达菲烧电焊翻山倒海覅US和覅US地方是否撒打算的圣达菲圣达菲舒服是的
+    	</div>
+	</body>
+	<script type="text/javascript">		
+        (function (doc, win) {
+					//获取documentElement对象
+					var docEl = doc.documentElement,
+						//兼容性处理，主要获取当前浏览器的窗口改变事件。
+						resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+						
+						//定义一个函数，
+            recalc = function () {
+							//获取当前设备屏幕的宽度
+							var clientWidth = docEl.clientWidth;
+							//如果没有拿到屏幕宽度，不做了
+							if (!clientWidth) return;
+							//打印一下
+							console.log(clientWidth)
+							//设置html标签的font-size属性的值
+							//正常情况下，750像素的屏幕中，1rem的值是100px
+							//现在屏幕是75px，1rem的值应该是10px
+              docEl.style.fontSize = 100 * (75 / 750) + 'px';
+            };
+					//判断一下document对象中有没有addEventListener这个方法，不做了
+					if (!doc.addEventListener) return;
+					//window对象添加事件监听，监听resizeEvt，当发生事件时调用recalc函数进行处理，第三个参数false是阻止事件冒泡
+					win.addEventListener(resizeEvt, recalc, false);
+					//document对象添加事件监听，dom内容加载完毕之后，调用recalc函数进行处理
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+				})(document, window);
+				
+				//声明函数之后立即调用。
+				// (function(){
+
+				// })();
+	</script>
+</html>
