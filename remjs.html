@@ -47,7 +47,7 @@
 							//设置html标签的font-size属性的值
 							//正常情况下，750像素的屏幕中，1rem的值是100px
 							//现在屏幕是75px，1rem的值应该是10px
-              docEl.style.fontSize = 100 * (75 / 750) + 'px';
+              docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
             };
 					//判断一下document对象中有没有addEventListener这个方法，不做了
 					if (!doc.addEventListener) return;
